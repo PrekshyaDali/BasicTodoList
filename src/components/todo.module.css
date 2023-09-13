@@ -7,6 +7,13 @@
   margin-top: 0;
 }
 
+@media(max-width:358px){
+    .boxdiv{
+        
+        width: 100%;
+    }
+}
+
 .boxdiv {
   border: none;
   width: 400px;
@@ -17,6 +24,7 @@
   align-items: center;
   overflow-y: auto;
   flex-grow: 0;
+
 
 }
 
@@ -29,8 +37,13 @@
   width: 300px;
   position: relative;
   margin-bottom: 20px;
-}
 
+}
+@media(max-width: 358px){
+    .inputfield{
+        width: auto;
+    }
+}
 .inputContainer {
   display: flex;
   align-items: center;
@@ -97,7 +110,7 @@
   border: none;
   border-radius: 15px;
   position: relative;
-  padding-left: 10px;
+  padding-left: 20px;
   display: flex;
   margin-bottom: 10px;
 

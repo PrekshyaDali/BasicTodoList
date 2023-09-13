@@ -1,19 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import classes from "./todo.module.css";
 
 const Todo = () => {
   const [inputData, setInputData] = useState("");
   const [items, setItems] = useState([]);
-  console.log(inputData);
+
+  useEffect(() => {
+    // Load data from local storage when the component mounts
+    const storedItems = JSON.parse(localStorage.getItem("myItems"));
+    if (storedItems) {
+      setItems(storedItems);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Save data to local storage whenever the 'items' state changes
+    localStorage.setItem("myItems", JSON.stringify(items));
+  }, [items]);
+
   const ChangeHandler = (event) => {
     return setInputData(event.target.value);
   };
-  console.log(items);
+
   const addItem = () => {
     if (!inputData) {
       return;
     } else {
       setItems([...items, inputData]);
+
       setInputData("");
     }
   };
@@ -21,14 +35,14 @@ const Todo = () => {
   const deleteItem = (id) => {
     const updateditems = items.filter((element, index) => {
       return;
-      index !== index;
+      id !== index;
     });
     setItems(updateditems);
   };
 
-  const removeAll=()=>{
+  const removeAll = () => {
     setItems([]);
-  }
+  };
 
   return (
     <div className={classes.maindiv}>
@@ -49,7 +63,9 @@ const Todo = () => {
             <button onClick={addItem} className={classes.addbutton}></button>
           </div>
         </div>
-        <button className={classes.submit} onClick={removeAll}>Remove All</button>
+        <button className={classes.submit} onClick={removeAll}>
+          Remove All
+        </button>
 
         {/* <div className={classes.show}>
           <div className={classes.eachItem}>Apple</div>

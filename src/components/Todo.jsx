@@ -8,7 +8,7 @@ const Todo = () => {
   useEffect(() => {
     // Load data from local storage when the component mounts
     const storedItems = JSON.parse(localStorage.getItem("myItems"));
-    if (storedItems) {
+    if (storedItems && storedItems.length > 0) {
       setItems(storedItems);
     }
   }, []);
@@ -27,17 +27,15 @@ const Todo = () => {
       return;
     } else {
       setItems([...items, inputData]);
-
       setInputData("");
     }
   };
 
   const deleteItem = (id) => {
-    const updateditems = items.filter((element, index) => {
-      return;
-      id !== index;
+    const updatedItems = items.filter((elem, ind) => {
+      return ind !== id;
     });
-    setItems(updateditems);
+    setItems(updatedItems);
   };
 
   const removeAll = () => {
@@ -67,16 +65,12 @@ const Todo = () => {
           Remove All
         </button>
 
-        {/* <div className={classes.show}>
-          <div className={classes.eachItem}>Apple</div>
-          <button className={classes.delete}>-</button>
-        </div> */}
         {items.map((item, index) => (
           <div key={index} className={classes.show}>
             <div className={classes.eachItem}>{item}</div>
             <button
               className={classes.delete}
-              onClick={() => deleteItem(index)} // Assuming you have a deleteItem function
+              onClick={() => deleteItem(index)}
             >
               -
             </button>

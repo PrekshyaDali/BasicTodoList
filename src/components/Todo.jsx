@@ -18,9 +18,18 @@ const Todo = () => {
     }
   };
 
-  const deleteItem = (index)=>{
+  const deleteItem = (id) => {
+    const updateditems = items.filter((element, index) => {
+      return;
+      index !== index;
+    });
+    setItems(updateditems);
+  };
 
+  const removeAll=()=>{
+    setItems([]);
   }
+
   return (
     <div className={classes.maindiv}>
       <div className={classes.boxdiv}>
@@ -40,7 +49,7 @@ const Todo = () => {
             <button onClick={addItem} className={classes.addbutton}></button>
           </div>
         </div>
-        <button className={classes.submit}>CHECKLIST</button>
+        <button className={classes.submit} onClick={removeAll}>Remove All</button>
 
         {/* <div className={classes.show}>
           <div className={classes.eachItem}>Apple</div>
@@ -51,7 +60,7 @@ const Todo = () => {
             <div className={classes.eachItem}>{item}</div>
             <button
               className={classes.delete}
-              onClick={deleteItem} // Assuming you have a deleteItem function
+              onClick={() => deleteItem(index)} // Assuming you have a deleteItem function
             >
               -
             </button>

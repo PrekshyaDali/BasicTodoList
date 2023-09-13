@@ -1,0 +1,162 @@
+.maindiv {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  
+}
+
+.boxdiv {
+  border: none;
+  width: 400px;
+  height: 500px;
+  background-color: lightblue;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.icon {
+  width: 90px;
+  object-fit: contain;
+}
+
+/* .input {
+  height: 100%;
+  width: 270px;
+  border-radius: 15px;
+  border: none;
+  
+}
+
+.inputfield {
+  height: 40px;
+  width: 300px;
+  position: relative;
+}
+
+.addbutton {
+  position: absolute;
+  right: 40px;
+  
+  
+} */
+
+.inputfield {
+    width: 300px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .inputContainer {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
+  
+    
+  }
+  
+  .input {
+    flex-grow: 1;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    padding-right: 40px; /* Reserve space for the button */
+    border: none;
+    padding-left: 20px;
+   
+  }
+  
+  .addbutton {
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    width: 30px;
+    height: 30px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    outline: none;
+
+  }
+  
+  .addbutton:before {
+    content: "+";
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  @media (max-width: 358px) {
+    .inputfield {
+      width: 100%; /* Expand the input field to full width */
+    }
+  
+    .addbutton {
+      right: 10px; /* Adjust the button's position for smaller screens */
+    }
+  }
+  .submit{
+    height: 40px;
+    width: 120px;
+    background-color: lightcoral;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+  }
+
+  .show{
+    height: 40px;
+    width: 300px;
+    border: solid;
+    border-width: 2px;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    position: relative;
+    padding-left: 10px;
+    display: flex;
+    margin-bottom: 10px;
+
+    align-items: center;
+
+  }
+  .show:hover{
+    background-color: lightcoral;
+  }
+
+  .eachitem{
+
+
+  }
+  .delete{
+    position: absolute;
+    right:10px;
+    height: 30px;
+    width: 30px;
+    top:4px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+   
+  }
+

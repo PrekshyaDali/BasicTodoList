@@ -70,10 +70,16 @@ const Todo = () => {
             <div className={classes.eachItem}>{item}</div>
             <button
               className={classes.delete}
-              onClick={() => deleteItem(index)}
-            >
+              onClick={() => deleteItem(index)}>
               -
             </button>
+            <div className={classes.icondiv}>
+              <img
+                className={classes.editicon}
+                src="edit-icon.png"
+                alt="editicon"
+              />
+            </div>
           </div>
         ))}
       </div>

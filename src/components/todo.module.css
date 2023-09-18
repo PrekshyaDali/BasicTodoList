@@ -7,11 +7,10 @@
   margin-top: 0;
 }
 
-@media(max-width:358px){
-    .boxdiv{
-        
-        width: 100%;
-    }
+@media (max-width: 358px) {
+  .boxdiv {
+    width: 100%;
+  }
 }
 
 .boxdiv {
@@ -24,8 +23,6 @@
   align-items: center;
   overflow-y: auto;
   flex-grow: 0;
-
-
 }
 
 .icon {
@@ -37,12 +34,11 @@
   width: 300px;
   position: relative;
   margin-bottom: 20px;
-
 }
-@media(max-width: 358px){
-    .inputfield{
-        width: auto;
-    }
+@media (max-width: 358px) {
+  .inputfield {
+    width: auto;
+  }
 }
 .inputContainer {
   display: flex;
@@ -87,6 +83,9 @@
   align-items: center;
   height: 100%;
 }
+.addbutton:hover{
+  background-color: rgb(140, 180, 216);
+}
 
 .submit {
   height: 40px;
@@ -99,7 +98,9 @@
   cursor: pointer;
   margin-bottom: 20px;
 }
-
+.submit:hover{
+  background-color: coral;
+}
 
 .show {
   height: 40px;
@@ -116,9 +117,7 @@
 
   align-items: center;
 }
-.show:hover {
-  background-color: lightcoral;
-}
+
 
 .eachitem {
 }
@@ -135,4 +134,29 @@
   font-weight: bold;
   color: white;
   cursor: pointer;
+}
+
+.delete:hover{
+background-color: rgb(140, 180, 216);;
+}
+.icondiv {
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 50px;
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.editicon {
+  width: 15px;
+
+}
+.icondiv:hover {
+  background-color: rgb(140, 180, 216);
 }
